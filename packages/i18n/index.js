@@ -1,4 +1,4 @@
-import { common } from "./en/common.js";
-import { common } from "./zh/common.js";
+import enCommon from "./en/common.js";
+import zhCommon from "./zh/common.js";
 
-export { common as commonEN, common as commonZH };
+export { enCommon as commonEN, zhCommon as commonZH };
