@@ -1,0 +1,51 @@
+FROM node:18-alpine AS builder
+
+WORKDIR /app
+
+# 复制package.json文件
+COPY package.json ./
+COPY apps/nextjs-app2/package.json ./apps/nextjs-app2/
+COPY packages/ui/package.json ./packages/ui/
+COPY packages/utils/package.json ./packages/utils/
+
+# 安装依赖
+RUN npm ci --only=production
+
+# 复制源代码
+COPY . .
+
+# 构建共享包
+RUN npm run build --workspace=@wisland/ui
+RUN npm run build --workspace=@wisland/utils
+
+# 构建Next.js应用
+RUN npm run build --workspace=nextjs-app2
+
+# 生产环境镜像
+FROM node:18-alpine AS runner
+
+WORKDIR /app
+
+ENV NODE_ENV production
+
+# 创建非root用户
+RUN addgroup --system --gid 1001 nodejs
+RUN adduser --system --uid 1001 nextjs
+
+# 复制构建产物
+COPY --from=builder /app/apps/nextjs-app2/public ./apps/nextjs-app2/public
+COPY --from=builder /app/apps/nextjs-app2/.next/standalone ./
+COPY --from=builder /app/apps/nextjs-app2/.next/static ./apps/nextjs-app2/.next/static
+
+# 复制共享包
+COPY --from=builder /app/packages/ui/dist ./packages/ui/dist
+COPY --from=builder /app/packages/utils/dist ./packages/utils/dist
+
+USER nextjs
+
+EXPOSE 3002
+
+ENV PORT 3002
+ENV HOSTNAME "0.0.0.0"
+
+CMD ["node", "apps/nextjs-app2/server.js"]
