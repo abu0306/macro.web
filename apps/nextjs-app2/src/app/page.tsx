@@ -3,8 +3,10 @@
 import { useState } from 'react'
 import { Button, Card, Input, Modal, Badge } from '@wisland/ui'
 import { formatDate, isValidEmail, validatePassword } from '@wisland/utils'
+import { useTranslation } from 'react-i18next'
 
 export default function Home() {
+  const { t, i18n } = useTranslation();
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
@@ -34,9 +36,12 @@ export default function Home() {
     <div className="container mx-auto px-4 py-8">
       <div className="max-w-4xl mx-auto">
         <header className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Next.js App 2
-          </h1>
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">{t('common.appName')}</h1>
+          <div className="mb-4">
+            <Button variant="outline" onClick={() => i18n.changeLanguage(i18n.language === 'zh-CN' ? 'en-US' : 'zh-CN')}>
+              {i18n.language}
+            </Button>
+          </div>
           <p className="text-xl text-gray-600">
             表单验证和模态框演示应用
           </p>

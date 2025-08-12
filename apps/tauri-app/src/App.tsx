@@ -1,14 +1,21 @@
 import { useMemo, useState } from "react";
+import { useTranslation } from 'react-i18next'
 import reactLogo from "./assets/react.svg";
 import "./App.css";
 
 function App() {
+  const { t, i18n } = useTranslation();
   const [greetMsg, setGreetMsg] = useState("");
   const [name, setName] = useState("");
 
   return (
     <main className="container">
-      <h1>Welcome to Tauri + React</h1>
+      <h1>{t('common.appName')}</h1>
+      <div style={{ marginBottom: 12 }}>
+        <button onClick={() => i18n.changeLanguage(i18n.language === 'zh-CN' ? 'en-US' : 'zh-CN')}>
+          {i18n.language}
+        </button>
+      </div>
 
       <div className="row">
         <a href="https://vite.dev" target="_blank">
@@ -40,9 +47,9 @@ function App() {
         <input
           id="greet-input"
           onChange={(e) => setName(e.currentTarget.value)}
-          placeholder="Enter a name..."
+          placeholder={t('common.greetings.hello', { name: '...' })}
         />
-        <button type="submit">Greet</button>
+        <button type="submit">{t('common.actions.confirm')}</button>
       </form>
       <p>{greetMsg}</p>
     </main>

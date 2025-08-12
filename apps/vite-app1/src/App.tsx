@@ -1,8 +1,10 @@
 import { useState } from 'react'
+import { useI18n } from '@wisland/i18n'
 import { Button, Card, Badge, Avatar, Loading, Modal } from '@wisland/ui'
 import { formatDate, capitalize, formatNumber, formatFileSize, formatCurrency } from '@wisland/utils'
 
 function App() {
+  const { t, locale, setLocale } = useI18n();
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
 
@@ -16,8 +18,13 @@ function App() {
       <div className="max-w-4xl mx-auto">
         <header className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Vite App 1
+            {t('common.appName')}
           </h1>
+          <div className="mb-4">
+            <Button variant="outline" onClick={() => setLocale(locale === 'zh-CN' ? 'en-US' : 'zh-CN')}>
+              {locale}
+            </Button>
+          </div>
           <p className="text-xl text-gray-600">
             使用共享UI组件和工具函数的Vite应用
           </p>

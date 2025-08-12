@@ -1,8 +1,10 @@
 import { useState } from 'react'
+import { useI18n } from '@wisland/i18n'
 import { Button, Card, Input, Modal, Badge, Loading } from '@wisland/ui'
 import { formatDate, isValidEmail, validatePassword, formatNumber, formatPercentage } from '@wisland/utils'
 
 function App() {
+  const { t, locale, setLocale } = useI18n();
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
@@ -42,8 +44,13 @@ function App() {
       <div className="max-w-4xl mx-auto">
         <header className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Vite App 2
+            {t('common.appName')}
           </h1>
+          <div className="mb-4">
+            <Button variant="outline" onClick={() => setLocale(locale === 'zh-CN' ? 'en-US' : 'zh-CN')}>
+              {locale}
+            </Button>
+          </div>
           <p className="text-xl text-gray-600">
             表单验证和数据处理演示应用
           </p>

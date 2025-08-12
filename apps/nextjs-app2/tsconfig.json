@@ -20,6 +20,9 @@
             ],
             "@wisland/utils": [
                 "../../packages/utils/src"
+            ],
+            "@wisland/i18n": [
+                "../../packages/i18n/src"
             ]
         }
     },

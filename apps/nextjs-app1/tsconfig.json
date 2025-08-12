@@ -12,9 +12,18 @@
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"],
-      "@wisland/ui": ["../../packages/ui/src"],
-      "@wisland/utils": ["../../packages/utils/src"]
+      "@/*": [
+        "./src/*"
+      ],
+      "@wisland/ui": [
+        "../../packages/ui/src"
+      ],
+      "@wisland/utils": [
+        "../../packages/utils/src"
+      ],
+      "@wisland/i18n": [
+        "../../packages/i18n/src"
+      ]
     }
   },
   "include": [
