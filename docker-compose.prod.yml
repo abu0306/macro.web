@@ -17,6 +17,7 @@ services:
       - nextjs-app2
       - vite-app1
       - vite-app2
+      - tauri-web
     networks:
       - wisland-network
 
@@ -63,6 +64,18 @@ services:
     container_name: vite-app2-prod
     expose:
       - "4002"
+    environment:
+      - NODE_ENV=production
+    networks:
+      - wisland-network
+
+  tauri-web:
+    build:
+      context: .
+      dockerfile: ./apps/tauri-app/Dockerfile.prod
+    container_name: tauri-web-prod
+    expose:
+      - "4010"
     environment:
       - NODE_ENV=production
     networks:
