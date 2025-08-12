@@ -15,23 +15,11 @@ export const Avatar: React.FC<AvatarProps> = ({
   fallback,
   className = '',
 }) => {
-  const sizeClasses = {
-    sm: 'w-8 h-8 text-sm',
-    md: 'w-10 h-10 text-base',
-    lg: 'w-12 h-12 text-lg',
-    xl: 'w-16 h-16 text-xl'
-  };
-
-  const baseClasses = 'inline-block rounded-full bg-gray-300 flex items-center justify-center font-medium text-gray-700 overflow-hidden';
-  const classes = `${baseClasses} ${sizeClasses[size]} ${className}`;
+  const classes = `avatar avatar--${size} ${className}`;
 
   if (src) {
     return (
-      <img
-        src={src}
-        alt={alt}
-        className={classes}
-      />
+      <img src={src} alt={alt} className={classes} />
     );
   }
 

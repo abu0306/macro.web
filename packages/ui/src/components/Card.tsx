@@ -13,19 +13,7 @@ export const Card: React.FC<CardProps> = ({
   padding = 'md',
   shadow = 'md',
 }) => {
-  const paddingClasses = {
-    sm: 'p-3',
-    md: 'p-6',
-    lg: 'p-8'
-  };
-
-  const shadowClasses = {
-    sm: 'shadow-sm',
-    md: 'shadow-md',
-    lg: 'shadow-lg'
-  };
-
-  const classes = `bg-white rounded-lg border border-gray-200 ${paddingClasses[padding]} ${shadowClasses[shadow]} ${className}`;
+  const classes = `card card--p-${padding} card--shadow-${shadow} ${className}`;
 
   return (
     <div className={classes}>
