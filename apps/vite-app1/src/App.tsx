@@ -1,7 +1,7 @@
 import {  Header, Footer } from '@wisland/ui'
 function App() {
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div>
       <Header title="Wisland" />
     <div>
       <div>Vite1</div>
