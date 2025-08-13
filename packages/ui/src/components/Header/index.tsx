@@ -56,7 +56,7 @@ function resolveLinks(): { label: string; href: string }[] {
 export const Header: React.FC<HeaderProps> = ({ title = 'Wisland', className = '' }) => {
   const links = resolveLinks();
   return (
-    <header className={`${styles.root} ${className}`}>
+    <header className={`${styles.root}`}>
       <div className={styles.inner}>
         <div className={styles.brand}>{title}</div>
         <nav className={styles.nav}>
