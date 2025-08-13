@@ -10,16 +10,14 @@ export default defineConfig({
         port: 4001,
         strictPort: true,
         hmr: {
-            clientPort: 80,
+            clientPort: 9090,
             path: '/vite1/@vite/client',
         },
     },
     plugins: [react()],
     resolve: {
         alias: {
-            '@': path.resolve(__dirname, './src'),
-            '@wisland/ui': path.resolve(__dirname, '../../packages/ui/src'),
-            '@wisland/utils': path.resolve(__dirname, '../../packages/utils/src'),
+            '@': path.resolve(__dirname, './src')
         },
     },
     optimizeDeps: {
