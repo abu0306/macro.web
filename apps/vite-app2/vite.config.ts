@@ -6,6 +6,7 @@ import path from 'path'
 export default defineConfig({
     base: '/vite2/',
     server: {
+        host: true,
         port: 4002,
     },
     plugins: [react()],
