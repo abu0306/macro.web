@@ -1,17 +1,17 @@
-import './globals.scss'
-import type { Metadata } from 'next'
-import Providers from './providers'
-import { Header, Footer } from '@wisland/ui'
+import "./globals.scss";
+import type { Metadata } from "next";
+import Providers from "./providers";
+import { Header, Footer } from "@wisland/ui";
 
 export const metadata: Metadata = {
-  title: 'Next.js App 1',
-  description: 'First Next.js application in the monorepo',
-}
+  title: "Next.js App 1",
+  description: "First Next.js application in the monorepo",
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="zh-CN">
@@ -23,5 +23,5 @@ export default function RootLayout({
         </Providers>
       </body>
     </html>
-  )
+  );
 }
