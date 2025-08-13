@@ -1,5 +1,6 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
+import path from "path";
 
 // Allow reading optional host override for HMR when running via Tauri
 const host = (process.env as Record<string, string | undefined>)[
@@ -32,6 +33,12 @@ export default defineConfig(async () => ({
     watch: {
       // 3. tell Vite to ignore watching `src-tauri`
       ignored: ["**/src-tauri/**"],
+    },
+  },
+  resolve: {
+    alias: {
+      '@wisland/ui': path.resolve(__dirname, '../../packages/ui/src'),
+      '@wisland/utils': path.resolve(__dirname, '../../packages/utils/src'),
     },
   },
 }));

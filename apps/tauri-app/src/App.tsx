@@ -1,4 +1,5 @@
 import { useMemo, useState } from "react";
+import { Header, Footer } from '@wisland/ui'
 import { useTranslation } from 'react-i18next'
 import reactLogo from "./assets/react.svg";
 import "./App.css";
@@ -10,6 +11,7 @@ function App() {
 
   return (
     <main className="container">
+      <Header title="Wisland" />
       <h1>{t('common.appName')}</h1>
       <div style={{ marginBottom: 12 }}>
         <button onClick={() => i18n.changeLanguage(i18n.language === 'zh-CN' ? 'en-US' : 'zh-CN')}>
@@ -52,6 +54,7 @@ function App() {
         <button type="submit">{t('common.actions.confirm')}</button>
       </form>
       <p>{greetMsg}</p>
+      <Footer />
     </main>
   );
 }

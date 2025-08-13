@@ -1,6 +1,7 @@
 import './globals.scss'
 import type { Metadata } from 'next'
 import Providers from './providers'
+import { Header, Footer } from '@wisland/ui'
 
 export const metadata: Metadata = {
   title: 'Next.js App 1',
@@ -15,7 +16,11 @@ export default function RootLayout({
   return (
     <html lang="zh-CN">
       <body>
-        <Providers>{children}</Providers>
+        <Providers>
+          <Header title="Wisland" />
+          {children}
+          <Footer />
+        </Providers>
       </body>
     </html>
   )
