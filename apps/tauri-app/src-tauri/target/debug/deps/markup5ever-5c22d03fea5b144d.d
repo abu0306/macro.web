@@ -1,0 +1,15 @@
+/Users/abu/Desktop/wisland/apps/tauri-app/src-tauri/target/debug/deps/markup5ever-5c22d03fea5b144d.d: /Users/abu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/markup5ever-0.11.0/lib.rs /Users/abu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/markup5ever-0.11.0/data/mod.rs /Users/abu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/markup5ever-0.11.0/interface/mod.rs /Users/abu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/markup5ever-0.11.0/interface/tree_builder.rs /Users/abu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/markup5ever-0.11.0/serialize.rs /Users/abu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/markup5ever-0.11.0/util/buffer_queue.rs /Users/abu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/markup5ever-0.11.0/util/smallcharset.rs /Users/abu/Desktop/wisland/apps/tauri-app/src-tauri/target/debug/build/markup5ever-f80a35b3eeedf60f/out/generated.rs /Users/abu/Desktop/wisland/apps/tauri-app/src-tauri/target/debug/build/markup5ever-f80a35b3eeedf60f/out/named_entities.rs
+
+/Users/abu/Desktop/wisland/apps/tauri-app/src-tauri/target/debug/deps/libmarkup5ever-5c22d03fea5b144d.rmeta: /Users/abu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/markup5ever-0.11.0/lib.rs /Users/abu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/markup5ever-0.11.0/data/mod.rs /Users/abu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/markup5ever-0.11.0/interface/mod.rs /Users/abu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/markup5ever-0.11.0/interface/tree_builder.rs /Users/abu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/markup5ever-0.11.0/serialize.rs /Users/abu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/markup5ever-0.11.0/util/buffer_queue.rs /Users/abu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/markup5ever-0.11.0/util/smallcharset.rs /Users/abu/Desktop/wisland/apps/tauri-app/src-tauri/target/debug/build/markup5ever-f80a35b3eeedf60f/out/generated.rs /Users/abu/Desktop/wisland/apps/tauri-app/src-tauri/target/debug/build/markup5ever-f80a35b3eeedf60f/out/named_entities.rs
+
+/Users/abu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/markup5ever-0.11.0/lib.rs:
+/Users/abu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/markup5ever-0.11.0/data/mod.rs:
+/Users/abu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/markup5ever-0.11.0/interface/mod.rs:
+/Users/abu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/markup5ever-0.11.0/interface/tree_builder.rs:
+/Users/abu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/markup5ever-0.11.0/serialize.rs:
+/Users/abu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/markup5ever-0.11.0/util/buffer_queue.rs:
+/Users/abu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/markup5ever-0.11.0/util/smallcharset.rs:
+/Users/abu/Desktop/wisland/apps/tauri-app/src-tauri/target/debug/build/markup5ever-f80a35b3eeedf60f/out/generated.rs:
+/Users/abu/Desktop/wisland/apps/tauri-app/src-tauri/target/debug/build/markup5ever-f80a35b3eeedf60f/out/named_entities.rs:
+
+# env-dep:OUT_DIR=/Users/abu/Desktop/wisland/apps/tauri-app/src-tauri/target/debug/build/markup5ever-f80a35b3eeedf60f/out

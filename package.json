@@ -16,7 +16,11 @@
     "clean": "turbo run clean",
     "docker:dev": "docker-compose -f docker-compose.dev.yml up --build",
     "docker:prod": "docker-compose -f docker-compose.prod.yml up --build",
-    "docker:down": "docker-compose down"
+    "docker:down": "docker-compose down",
+    "dev:tauri": "npm run dev:tauri --workspace=tauri-app",
+    "dev:tauri:web": "npm run dev:web --workspace=tauri-app",
+    "build:tauri:web": "npm run build:web --workspace=tauri-app",
+    "build:tauri:desktop": "npm run build:tauri --workspace=tauri-app"
   },
   "devDependencies": {
     "turbo": "^1.10.0",

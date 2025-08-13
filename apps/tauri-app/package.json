@@ -1,0 +1,29 @@
+{
+    "name": "tauri-app",
+    "private": true,
+    "version": "0.1.0",
+    "type": "module",
+    "scripts": {
+        "dev": "cross-env VITE_PUBLIC_BASE=/tauri/ vite --port 1420",
+        "dev:web": "vite --port 1420",
+        "dev:tauri": "cross-env VITE_PUBLIC_BASE=/ tauri dev",
+        "build:web": "cross-env VITE_PUBLIC_BASE=/tauri/ vite build",
+        "build:tauri": "cross-env VITE_PUBLIC_BASE=/ vite build && tauri build",
+        "preview": "vite preview --port 1420",
+        "clean": "rimraf dist"
+    },
+    "dependencies": {
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0"
+    },
+    "devDependencies": {
+        "@tauri-apps/cli": "^1.5.10",
+        "@types/react": "^18.0.0",
+        "@types/react-dom": "^18.0.0",
+        "@vitejs/plugin-react": "^4.0.0",
+        "cross-env": "^7.0.3",
+        "rimraf": "^5.0.0",
+        "typescript": "^5.0.0",
+        "vite": "^4.4.0"
+    }
+}

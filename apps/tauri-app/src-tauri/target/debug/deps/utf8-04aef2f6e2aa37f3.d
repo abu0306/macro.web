@@ -1,0 +1,9 @@
+/Users/abu/Desktop/wisland/apps/tauri-app/src-tauri/target/debug/deps/utf8-04aef2f6e2aa37f3.d: /Users/abu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/utf-8-0.7.6/src/lib.rs /Users/abu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/utf-8-0.7.6/src/lossy.rs /Users/abu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/utf-8-0.7.6/src/read.rs
+
+/Users/abu/Desktop/wisland/apps/tauri-app/src-tauri/target/debug/deps/libutf8-04aef2f6e2aa37f3.rlib: /Users/abu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/utf-8-0.7.6/src/lib.rs /Users/abu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/utf-8-0.7.6/src/lossy.rs /Users/abu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/utf-8-0.7.6/src/read.rs
+
+/Users/abu/Desktop/wisland/apps/tauri-app/src-tauri/target/debug/deps/libutf8-04aef2f6e2aa37f3.rmeta: /Users/abu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/utf-8-0.7.6/src/lib.rs /Users/abu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/utf-8-0.7.6/src/lossy.rs /Users/abu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/utf-8-0.7.6/src/read.rs
+
+/Users/abu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/utf-8-0.7.6/src/lib.rs:
+/Users/abu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/utf-8-0.7.6/src/lossy.rs:
+/Users/abu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/utf-8-0.7.6/src/read.rs:
