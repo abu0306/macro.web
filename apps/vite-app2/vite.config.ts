@@ -6,13 +6,7 @@ import path from 'path'
 export default defineConfig({
     base: '/vite2/',
     server: {
-        host: true,
         port: 4002,
-        strictPort: true,
-        hmr: {
-            clientPort: 9090,
-            path: '/vite2/@vite/client',
-        },
     },
     plugins: [react()],
     resolve: {
