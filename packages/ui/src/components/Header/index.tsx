@@ -20,8 +20,7 @@ function resolveLinks(): { label: string; href: string }[] {
     return prodLinks;
   }
 
-  const { protocol, hostname, port, href, pathname } = window.location;
-  const origin = `${protocol}//${hostname}${port ? `:${port}` : ''}`;
+  const { protocol, hostname, port, pathname } = window.location;
 
   const isProdHosts =
     hostname.endsWith('.local') ||
@@ -34,12 +33,13 @@ function resolveLinks(): { label: string; href: string }[] {
 
   const usingDevGateway = port === '9090' || pathname.startsWith('/next') || pathname.startsWith('/vite') || pathname.startsWith('/tauri');
   if (usingDevGateway) {
+    // 在网关模式下返回相对路径，保持当前 host:port（避免丢失 9090）
     return [
-      { label: 'Next1', href: `${origin}/next1` },
-      { label: 'Next2', href: `${origin}/next2` },
-      { label: 'Vite1', href: `${origin}/vite1/` },
-      { label: 'Vite2', href: `${origin}/vite2/` },
-      { label: 'Tauri', href: `${origin}/tauri` },
+      { label: 'Next1', href: `/next1` },
+      { label: 'Next2', href: `/next2` },
+      { label: 'Vite1', href: `/vite1/` },
+      { label: 'Vite2', href: `/vite2/` },
+      { label: 'Tauri', href: `/tauri` },
     ];
   }
 
@@ -56,7 +56,7 @@ function resolveLinks(): { label: string; href: string }[] {
 export const Header: React.FC<HeaderProps> = ({ title = 'Wisland', className = '' }) => {
   const links = resolveLinks();
   return (
-    <header className={`${styles.root}`}>
+    <header className={`${styles.root} ${className}`}>
       <div className={styles.inner}>
         <div className={styles.brand}>{title}</div>
         <nav className={styles.nav}>

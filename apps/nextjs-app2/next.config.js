@@ -1,3 +1,5 @@
+const path = require('path');
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     experimental: {
@@ -5,6 +7,12 @@ const nextConfig = {
     },
     transpilePackages: ['@wisland/ui', '@wisland/utils', '@wisland/i18n'],
     basePath: '/next2',
+    webpack: (config) => {
+        config.resolve.alias['@wisland/ui'] = path.resolve(__dirname, '../../packages/ui/src');
+        config.resolve.alias['@wisland/utils'] = path.resolve(__dirname, '../../packages/utils/src');
+        config.resolve.alias['@wisland/i18n'] = path.resolve(__dirname, '../../packages/i18n');
+        return config;
+    },
 }
 
 module.exports = nextConfig

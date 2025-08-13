@@ -8,14 +8,18 @@ export default defineConfig({
     server: {
         host: true,
         port: 4001,
+        fs: { allow: [path.resolve(__dirname, '../../')] }
     },
     plugins: [react()],
     resolve: {
         alias: {
-            '@': path.resolve(__dirname, './src')
+            '@': path.resolve(__dirname, './src'),
+            '@wisland/ui': path.resolve(__dirname, '../../packages/ui/src'),
+            '@wisland/utils': path.resolve(__dirname, '../../packages/utils/src'),
+            '@wisland/i18n': path.resolve(__dirname, '../../packages/i18n')
         },
     },
     optimizeDeps: {
-        include: ['@wisland/ui', '@wisland/utils'],
+        exclude: ['@wisland/ui', '@wisland/utils', '@wisland/i18n'],
     },
 })
